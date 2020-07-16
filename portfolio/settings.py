@@ -130,6 +130,6 @@ STATIC_URL = '/static/'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOSE_USER = 'tlotlegomgp@gmail.com'
-EMAIL_HOST_PASSWORD = 'yofcndddplaspust'
+EMAIL_HOST_PASSWORD = os.environ.get('DJANGO_EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
