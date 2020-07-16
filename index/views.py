@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 
 def home_view(request):
-    #If user has filled the email form and wants to post form
+    #If user has filled the email form and wants to post it
 	if request.method == "POST":
 		form = ContactForm(request.POST)
 		if form.is_valid():
