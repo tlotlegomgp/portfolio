@@ -1,89 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0" />
+		<title>Tlotlego</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asset" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+		<link rel="stylesheet" href="{% static 'index/css/styles.min.css' %}" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css" />
+	</head>
 
-<head>
-    {% load static %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Tlotlego</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asset">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="{% static 'index/css/form.styles.min.css' %}">
-    <link rel="stylesheet" href="{% static 'index/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-</head>
+	<body style="opacity: 1; background-color: #2a2b2e">
+		<header>
+			<nav
+				class="navbar navbar-expand-lg fixed-top portfolio-navbar navbar-dark"
+				style="background-color: #2a2b2e; color: rgb(171, 209, 205)"
+			>
+				<div class="container">
+					<a
+						class="navbar-brand"
+						href="{% url 'index' %}"
+						style="color: rgb(171, 209, 205); font-size: 25px; font-family: 'Alfa Slab One', cursive"
+						>tlotlegoMGP</a
+					>
+					<button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="navbar-toggler-icon navbar-dark"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item">
+								<a
+									class="nav-link slide-section"
+									style="color: rgb(171, 209, 205)"
+									href="#sectionProjects"
+									>Projects</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link slide-section"
+									style="color: rgb(171, 209, 205)"
+									href="#sectionContact"
+									>Contact</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									style="color: rgb(171, 209, 205)"
+									href="{% static 'index/docs/TlotlegoMogapi.pdf' %}"
+									target="_blank"
+									>CV</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									style="color: rgb(171, 209, 205)"
+									href="https://github.com/Dark-Matter-crypto"
+									target="_blank"
+									rel="noopener noreferrer"
+									>Github&nbsp;<em class="fa fa-github"></em
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-<body style="opacity: 1;background-color: #2a2b2e;">
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top portfolio-navbar navbar-dark" style="background-color: #2a2b2e; color: rgb(171, 209, 205);">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'index' %}" style="color: rgb(171, 209, 205); font-size: 25px;font-family: 'Alfa Slab One', cursive;">tlotlegoMGP</a>
-                <button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon navbar-dark"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link slide-section" style="color: rgb(171, 209, 205);" href="#sectionAbout">About</a></li>
-                        <li class="nav-item"><a class="nav-link slide-section" style="color: rgb(171, 209, 205);" href="#sectionProjects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link slide-section" style="color: rgb(171, 209, 205);" href="#sectionContact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: rgb(171, 209, 205);" href="{% static 'index/docs/TlotlegoMogapi.pdf' %}" target="_blank">CV</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color: rgb(171, 209, 205);" href="https://github.com/Dark-Matter-crypto" target="_blank">Github&nbsp;<i class="fa fa-github"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <style type="text/css">
-        .main{
-            min-height: 88vh;
-            height: 100%;
-        }
-    </style>    
-    <div class="page landing-page">
-        {% block content %}
-        {% endblock %}
-    </div>
-    <footer class="page-footer" style="background-color: #2a2b2e;">
-        <div class="container">
-            <div class="links">
-                <a class = "slide-section" href="#sectionAbout" style="color: rgb(170, 213, 206);">About</a>
-                <a class = "slide-section" href="#sectionProjects" style="color: rgb(170, 213, 206);">Projects</a>
-                <a href="{% static 'index/docs/TlotlegoMogapi.pdf' %}" target="_blank" style="color: rgb(170, 213, 206);">CV</a>
-                <a href="https://github.com/Dark-Matter-crypto" target="_blank" style="color: rgb(170, 213, 206);">Github</a>
-            </div>
-            <div class="social-icons">
-                <a href="#" style="background-color: rgb(170, 213, 206);">
-                    <i class="icon ion-social-whatsapp" style="color: #2a2b2e;"></i>
-                </a>
-                <a href="#" style="background-color: rgb(170, 213, 206);">
-                    <i class="icon ion-social-github" style="color: #2a2b2e;"></i>
-                </a>
-                <a href="#" style="background-color: rgb(170, 213, 206);">
-                    <i class="icon ion-social-twitter" style="color: #2a2b2e;"></i>
-                </a>
-                <a href="https://tlotlegomgp@gmail.com" target="_blank" style="background-color: rgb(170, 213, 206);">
-                    <i class="icon ion-email" style="color: #2a2b2e;"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="{% static 'index/js/script.min.js' %}"></script>
-    <script src="{% static 'index/js/custom.js' %}"></script>
-</body>
-
+		<style type="text/css">
+			.main {
+				min-height: 88vh;
+				height: 100%;
+			}
+		</style>
+		<div class="page landing-page">{% block content %} {% endblock %}</div>
+		<footer class="page-footer" style="background-color: #2a2b2e">
+			<div class="container">
+				<div class="links">
+					<a class="slide-section" href="#sectionProjects" style="color: rgb(170, 213, 206)">Projects</a>
+					<a
+						href="{% static 'index/docs/TlotlegoMogapi.pdf' %}"
+						target="_blank"
+						style="color: rgb(170, 213, 206)"
+						>CV</a
+					>
+					<a
+						href="https://github.com/Dark-Matter-crypto"
+						rel="noopener noreferrer"
+						target="_blank"
+						style="color: rgb(170, 213, 206)"
+						>Github</a
+					>
+				</div>
+				<div class="social-icons">
+					<a href="#" style="background-color: rgb(170, 213, 206)">
+						<em class="icon ion-social-whatsapp" style="color: #2a2b2e"></em>
+					</a>
+					<a href="#" style="background-color: rgb(170, 213, 206)">
+						<em class="icon ion-social-github" style="color: #2a2b2e"></em>
+					</a>
+					<a href="#" style="background-color: rgb(170, 213, 206)">
+						<em class="icon ion-social-twitter" style="color: #2a2b2e"></em>
+					</a>
+					<a
+						href="https://tlotlegomgp@gmail.com"
+						rel="noopener noreferrer"
+						target="_blank"
+						style="background-color: rgb(170, 213, 206)"
+					>
+						<em class="icon ion-email" style="color: #2a2b2e"></em>
+					</a>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+		<script src="{% static 'index/js/script.min.js' %}"></script>
+		<script src="{% static 'index/js/custom.js' %}"></script>
+	</body>
 </html>

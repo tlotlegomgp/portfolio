@@ -1,116 +1,80 @@
 {% extends "index/header.html" %}
-{% block content %}
 {% load static %}
+{% block content %}
 
-<section class="portfolio-block block-intro" style="background-color: rgb(37, 68, 65);height: 570px;">
+<section class="portfolio-block block-intro" style="background-color: rgb(37, 68, 65);">
     <br><br><br><br><br>
     <div class="container">
         <div class="about-me">
-            <p class="text-center swing animated" style="font-family: Arbutus, cursive;font-size: 35px;color: rgb(255, 255, 255);padding: 29px;">Hi, I'm Tlotlego Mogapi.&nbsp;</p>
+            <p class="text-center swing animated" style="font-family: Arbutus, cursive;font-size: 35px;color: rgb(255, 255, 255);padding: 15px;">Hi, I'm Tlotlego Mogapi.&nbsp;</p>
         </div>
-    </div>
-    <p></p>
-    <p data-bs-hover-animate="bounce" style="color: rgb(255, 255, 255);">Do You Even Code Bro? Yes I Do&nbsp;<i class="fa fa-smile-o"></i></p>
-</section>
-
-<section id = "sectionAbout" class="portfolio-block website">
-    <div class="container" style="padding: 21px;background-color: rgb(37, 68, 65);">
-        <h2 class="text-center" style="padding: 9px;font-family: Montserrat;color: rgb(170, 213, 206);">
-            A Little About Me
-        </h2>
-        <p style="padding: 27px;font-family: Montserrat; color: rgb(170, 213, 206);">
-            I am a Computer Science and Informatics student based in Johannesburg.&nbsp;I love to learn, design and build cool stuff. I've been programming for 4 years&nbsp;
-        </p>
-        <blockquote class="blockquote">
-            <p class="text-center mb-0" style="padding: 15px;font-family: Courgette, cursive;color: rgb(170, 213, 206);">
-                <br>
-                "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."
-                <br>
-            </p>
-            <footer class="blockquote-footer text-center" style="padding: 14px;margin: 5px;">Steve Jobs</footer>
-        </blockquote>
+        <p class="text-center" style="color: rgb(255, 255, 255);padding: 40px;">Do You Even Code Bro? Yes I Do&nbsp;<em class="fa fa-smile-o"></em></p>
+        <br><br>
     </div>
 </section>
 
-<div id = "sectionProjects" class="d-flex d-lg-flex justify-content-center align-items-center">
-    <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" style="color: rgb(170, 213, 206);padding: 20px;font-family: Montserrat; background-color: #2a2b2e;">
-        My Projects
-    </h1>
-</div>
-
-<section class="portfolio-block website">
+<section style="padding: 20px; margin-top: 20px; margin-bottom: 15px;">
+    <div id = "sectionProjects" class="d-flex d-lg-flex text-center justify-content-center">
+        <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" style="color: rgb(170, 213, 206);padding: 30px; margin-top: 15px; margin-bottom:55px; font-family: Montserrat; background-color: #2a2b2e;">
+            My Projects
+        </h1>
+    </div>
     <div class="container">
-        <div class="row align-items-center" style="height: 361px;">
-            <div class="col-md-12 col-lg-5 offset-lg-1 text">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-6 text-center">
                 <h3 class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat">Personal Portfolio</h3>
                 <p class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat">
                     My personal website to showcase my projects built using Python's Django web framework. All the source code for each of the projects in the portfolio is linked to their respective repositories on Github. &nbsp;
                 </p>
-                <li class = "align-items-center text-center">
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Python</span>
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Django</span>
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Bootstrap</span>
-                </li>
-                <br>
+                <ol>
+                    <li >
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Python</span>
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Django</span>
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Bootstrap</span>
+                    </li>
+                </ol>
+                
                 <div class="btn-group" role="group" style="margin: 5px;">
                     <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" class="btn btn-sm border-light" type="button" style="color: rgb(255, 255, 255);background-color: rgb(37, 68, 65);">
-                        Source&nbsp;<i class="fa fa-github" style="color: rgb(255, 255, 255);"></i>
+                        Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
                     </button>
                 </div>
             </div>
             <div class="col-md-12 col-lg-5">
-                <div class="portfolio-laptop-mockup" style="width: 280px;">
-                    <div class="screen" style="background-color: rgb(37, 68, 65);">
-                        <style>
-                        .portfolio{
-                            background-image: url( "{% static 'index/img/portfolio.jpg' %}");
-                        }
-                        </style>
-                        <div class="screen-content portfolio"></div>
-                    </div>
-                </div>
+                <img class="img-fluid" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" style="margin-top: 15px;">
             </div>
         </div>
     </div>
 </section>
 
-<section class="portfolio-block website" style = "background-color: rgb(37, 68, 65);">
+<section style = "background-color: rgb(37, 68, 65); padding: 20px; margin-top: 20px; margin-bottom: 15px;">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-12 col-lg-5 offset-lg-1">
-                <div class="portfolio-laptop-mockup">
-                    <div class="screen" style="background-color: #2a2b2e;">
-                        <style>
-                        .mzansi{
-                            background-image: url( "{% static 'index/img/mzansi.jpg' %}");
-                        }
-                        </style>
-                        <div class="screen-content mzansi"></div>
-                    </div>
-                </div>
+            <div class="col-md-12 col-lg-5">
+                <img class="img-fluid" alt='project screenshot' src="{% static 'index/img/mzansi.jpg' %}" style="margin-top: 15px;">
             </div>
-            <div class="col-md-12 col-lg-5 offset-lg-0 text">
+            <div class="col-md-12 col-lg-6 text-center">
                 <h3 class="text-center" style="margin: 25px;color: rgb(170, 213, 206);font-family: Montserrat, sans-serif;">
                     Mzansi News
                 </h3>
                 <p class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat, sans-serif;">
                     A hub for all local news. Users can sign up to get access to search functionality which allows them to search for news based on location, category, or topic. I used the free NEWSAPI to make calls for the data. The challenging part of the project was having to convert each of the dates in the dataset dictionary, provided as a string, from the UTC time zone to SAST.
                 </p>
-                <li class = "align-items-center text-center">
-                    <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">NEWS API</span>
-                    <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">PostgreSQL</span>
-                    <span class = "badge" style = "background-color:#2a2b2e; padding: 7px; color: rgb(170, 213, 206);">Python</span>
-                    <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">Django</span>
-                    <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">User Authentication</span>
-                    <span class = "badge" style = "background-color:#2a2b2e; padding: 7px; color: rgb(170, 213, 206);">Bootstrap</span>
-                </li>
-                <br>
+                <ol>
+                    <li class = "align-items-center text-center">
+                        <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">NEWS API</span>
+                        <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">PostgreSQL</span>
+                        <span class = "badge" style = "background-color: #2a2b2e; padding: 7px; color: rgb(170, 213, 206);">Django</span>
+                        <span class = "badge" style = "background-color:#2a2b2e; padding: 7px; color: rgb(170, 213, 206);">Bootstrap</span>
+                    </li>
+                </ol>
+                
                 <div class="btn-group" role="group" style="margin: 5px;">
                     <button class="btn btn-sm border-light" type="button" style="background-color: #2a2b2e;color: rgb(255, 255, 255);">
-                        &nbsp; &nbsp; Live&nbsp;&nbsp;<i class="fa fa-play-circle-o"></i>&nbsp;
+                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
                     </button>
                     <button onclick="location.href='https://github.com/Dark-Matter-crypto/tlotlego-news_app'" target="_blank" class="btn btn-sm border-light" type="button" style="background-color: #2a2b2e;color: rgb(255, 255, 255);">
-                        Source&nbsp;<i class="fa fa-github"></i>
+                        Source&nbsp;<em class="fa fa-github"></em>
                     </button>
                 </div>
             </div>
@@ -118,95 +82,57 @@
     </div>
 </section>
 
-<section class="portfolio-block website">
+<section style="padding: 20px; margin-top: 20px; margin-bottom: 15px;">
     <div class="container">
-        <div class="row align-items-center" style="height: 361px;">
-            <div class="col-md-12 col-lg-5 offset-lg-1 text">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-6 text-center">
                 <h3 class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat">MGP Weather</h3>
                 <p class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat">
                     A weather website that allows users to search for weather conditions in all major cities. I used the openweathermap.org free API to make calls for the weather. The documentation helped me to get started. Most of the time was exhausted trying to get the weather card design right.&nbsp;
                 </p>
-                <li class = "align-items-center text-center">
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">OpenWeatherMap API</span>
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Python</span>
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Django</span>
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Bootstrap</span>
-                </li>
-                <br>
+                <ol>
+                    <li class = "align-items-center text-center">
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">OpenWeatherMap API</span>
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Python</span>
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Django</span>
+                        <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Bootstrap</span>
+                    </li>
+                </ol>
+                
                 <div class="btn-group" role="group" style="margin: 5px;">
                     <button class="btn btn-sm border-light" type="button" style="background-color: rgb(37, 68, 65);color: rgb(255, 255, 255);">
-                        &nbsp; &nbsp; Live&nbsp;&nbsp;<i class="fa fa-play-circle-o"></i>&nbsp;
+                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
                     </button>
                     <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-WeatherApp'" class="btn btn-sm border-light" type="button" style="background-color: rgb(37, 68, 65);color: rgb(255, 255, 255);">
-                        Source&nbsp;<i class="fa fa-github"></i>
+                        Source&nbsp;<em class="fa fa-github"></em>
                     </button>
                 </div>
             </div>
             <div class="col-md-12 col-lg-5">
-                <div class="portfolio-laptop-mockup" style="width: 280px;">
-                    <div class="screen" style="background-color: rgb(37, 68, 65);">
-                        <style>
-                        .weather{
-                            background-image: url( "{% static 'index/img/weather.jpg' %}");
-                        }
-                        </style>
-                        <div class="screen-content weather"></div>
-                    </div>
-                </div>
+                <img class="img-fluid center" alt='project screenshot' src="{% static 'index/img/weather.jpg' %}" style="margin-top: 15px;">
             </div>
         </div>
     </div>
 </section>
 
-<section class="portfolio-block mobile-app" style = "background-color: rgb(37, 68, 65);">
-    <div class="container align-items-center">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-3 offset-lg-2">
-                <div class="portfolio-phone-mockup" style="background-color: rgb(33, 79, 75);color: rgb(37, 68, 65);">
-                    <style>
-                    .mobile-iphone{
-                        background-image: url( "{% static 'index/img/mobile.png' %}");
-                    }
-                    </style>
-                    <div class="phone-screen mobile-iphone"></div>
-                    <div class="home-button" style="background-color: #2a2b2e;"></div>
+<section>
+    <div class = "justify-content-center align-items-center" style="padding: 20px; background-color: rgb(37, 68, 65);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="background-color: rgb(37, 68, 65); margin-top: 50px;">
+                    <h4 class="text-center" data-aos="zoom-out-up" data-aos-duration="450" data-aos-delay="100" style="color: rgb(255, 255, 255);font-family: Montserrat">
+                        Like what you see?
+                    </h4>
                 </div>
-            </div>
-            <div class="col-md-12 col-lg-5 text">
-                <h3 class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat">&nbsp;Twitter Client</h3>
-                <p class="text-center" style="color: rgb(170, 213, 206);font-family: Montserrat">
-                    A Twitter Client Android Mobile app built in Android Studio using Java
-                </p>
-                <li class = "align-items-center text-center">
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Java</span>
-                    <span class = "badge" style = "background-color: rgb(37, 68, 65); padding: 7px; color: rgb(170, 213, 206);">Android Studio</span>
-                </li>
-                <br>
-                <button class="btn btn-sm border-light" type="button" style="margin: 5px;background-color: rgb(37, 68, 65);color: rgb(255, 255, 255);">
-                    Source&nbsp;<i class="fa fa-github"></i>
-                </button>
             </div>
         </div>
     </div>
 </section>
-
-<div class = "d-flex d-lg-flex justify-content-center align-items-center" style="padding: 50px; background-color: rgb(37, 68, 65);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" style="background-color: rgb(37, 68, 65);">
-                <br><br>
-                <h4 class="text-center" data-aos="zoom-out-up" data-aos-duration="450" data-aos-delay="100" style="color: rgb(255, 255, 255);font-family: Montserrat">
-                    Like what you see?
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
 
 <section id = "sectionContact">
-    <div class="contact-super-clean" style="background-color: rgb(37, 68, 65);">
-        <form method="POST" action="{% url 'index' %}" style="background-color: #2a2b2e;"> {% csrf_token %}
-            <h2 class="text-center" style="color: rgb(171, 209, 205);font-family: Montserrat">Contact me</h2>
+    <div class="contact-clean" style="background-color: rgb(37, 68, 65);">
+        <form method="POST" action="{% url 'index' %}"> {% csrf_token %}
+            <h2 class="text-center" font-family: Montserrat">Contact me</h2>
             <div class="form-group">
                 {{ form.subject }}
             </div>
@@ -230,4 +156,5 @@
         </form>
     </div>
 </section>
+
 {% endblock %}
