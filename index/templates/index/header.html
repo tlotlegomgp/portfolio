@@ -4,7 +4,7 @@
 		{% load static %}
 		<meta charset="utf-8" />
 		<meta name="viewport" content="initial-scale=1.0" />
-		<title>Tlotlego</title>
+		<title>Tlotlego Mogapi</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asset" />
@@ -24,11 +24,11 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css" />
 	</head>
 
-	<body style="opacity: 1; background-color: #2a2b2e">
+	<body style="opacity: 1; background-color: #f6f8ff">
 		<header>
 			<nav
 				class="navbar navbar-expand-lg fixed-top portfolio-navbar navbar-dark"
-				style="background-color: #2a2b2e; color: rgb(171, 209, 205)"
+				style="background-color: #272d2d; color: rgb(171, 209, 205); padding: 17px"
 			>
 				<div class="container">
 					<a
@@ -90,43 +90,14 @@
 				height: 100%;
 			}
 		</style>
-		<div class="page landing-page">{% block content %} {% endblock %}</div>
-		<footer class="page-footer" style="background-color: #2a2b2e">
+		<div>{% block content %} {% endblock %}</div>
+		<footer class="page-footer">
 			<div class="container">
-				<div class="links">
-					<a class="slide-section" href="#sectionProjects" style="color: rgb(170, 213, 206)">Projects</a>
-					<a
-						href="{% static 'index/docs/TlotlegoMogapi.pdf' %}"
-						target="_blank"
-						style="color: rgb(170, 213, 206)"
-						>CV</a
-					>
-					<a
-						href="https://github.com/Dark-Matter-crypto"
-						rel="noopener noreferrer"
-						target="_blank"
-						style="color: rgb(170, 213, 206)"
-						>Github</a
-					>
-				</div>
+				<div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
 				<div class="social-icons">
-					<a href="#" style="background-color: rgb(170, 213, 206)">
-						<em class="icon ion-social-whatsapp" style="color: #2a2b2e"></em>
-					</a>
-					<a href="#" style="background-color: rgb(170, 213, 206)">
-						<em class="icon ion-social-github" style="color: #2a2b2e"></em>
-					</a>
-					<a href="#" style="background-color: rgb(170, 213, 206)">
-						<em class="icon ion-social-twitter" style="color: #2a2b2e"></em>
-					</a>
-					<a
-						href="https://tlotlegomgp@gmail.com"
-						rel="noopener noreferrer"
-						target="_blank"
-						style="background-color: rgb(170, 213, 206)"
-					>
-						<em class="icon ion-email" style="color: #2a2b2e"></em>
-					</a>
+					<a href="#"><i class="icon ion-social-facebook"></i></a
+					><a href="#"><i class="icon ion-social-instagram-outline"></i></a
+					><a href="#"><i class="icon ion-social-twitter"></i></a>
 				</div>
 			</div>
 		</footer>
