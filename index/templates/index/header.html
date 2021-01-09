@@ -17,6 +17,28 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 		<link rel="stylesheet" href="{% static 'index/css/styles.min.css' %}" />
+		<style type="text/css">
+
+			.button-dark {
+				background-color: #272d2d;color: rgb(255, 255, 255);
+			}
+
+			.badge-dark {
+				background-color: #272d2d; padding: 6px; color: rgb(170, 213, 206);
+			}
+
+			.badge-light {
+				background-color: rgb(170, 213, 206); padding: 6px; color: #272d2d;
+			}
+
+			.section-dark {
+				background-color: #272d2d; color: rgb(170, 213, 206); padding: 20px; padding-top: 80px; padding-bottom: 80px;
+			}
+
+			.section-light {
+				background-color: #f6f8ff; color: #272d2d; padding: 20px; padding-top: 50px; padding-bottom: 70px;
+			}
+		</style>
 	</head>
 
 	<body style="opacity: 1; background-color: #f6f8ff; font-family: Montserrat;">
@@ -76,33 +98,44 @@
 				</div>
 			</div>
 		</nav>
-
-		<style type="text/css">
+		<style>
 			.main {
 				min-height: 88vh; height: 100%;
-			}
-
-			.button-dark {
-				background-color: #272d2d;color: rgb(255, 255, 255);
-			}
-
-			.badge-dark {
-				background-color: #272d2d; padding: 6px; color: rgb(170, 213, 206);
-			}
-
-			.badge-light {
-				background-color: rgb(170, 213, 206); padding: 6px; color: #272d2d;
 			}
 		</style>
 
 		<div>{% block content %} {% endblock %}</div>
-		<footer class="page-footer">
+		<footer>
 			<div class="container">
-				<div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
-				<div class="social-icons">
-					<a href="#"><em class="icon ion-social-facebook"></em></a
-					><a href="#"><em class="icon ion-social-instagram-outline"></em></a
-					><a href="#"><em class="icon ion-social-twitter"></em></a>
+				<div class="row" style="padding: 20px;">
+					<div class="col-lg-6 text-center align-items-center">
+						<h5>
+							<a href="tel:072-864-3592" style="color: #272d2d;">
+								Cell: 072-864-3592
+							</a>
+						</h5>
+					</div>
+					<div class="col-lg-6 text-center align-items-center">
+						<h5>
+							<a href="mailto:tlotlegomgp@gmail.com" style="color: #272d2d;">
+								Email: tlotlegomgp@gmail.com
+							</a>
+						</h5>
+					</div> 
+				</div>
+				<div class="row">
+					<div class="col-lg-12 text-center align-items-center" style="padding-bottom: 30px;">
+						<style>
+							.social-footer {
+								padding-left: 20px;
+								padding-right: 20px;
+								text-decoration: none;
+								color: #272d2d;
+							}
+						</style>
+						<a href="#"><em class="fa fa-github-alt fa-2x social-footer"></em></a>
+						<a href="#"><em class="fa fa-twitter fa-2x social-footer"></em></a>
+					</div>
 				</div>
 			</div>
 		</footer>
