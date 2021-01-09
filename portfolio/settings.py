@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('PORTFOLIO_APP_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -126,7 +126,7 @@ STATIC_URL = '/static/'
 # myaccount.google.com/apppasswords
 
 
-#Email Settings
+# Email Settings
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOSE_USER = 'tlotlegomgp@gmail.com'
