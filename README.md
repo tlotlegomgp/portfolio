@@ -2,6 +2,8 @@
 
 Personal website to showcase my skills and all the projects I've been working on. 
 
+![](/index/static/index/img/portfolio.jpg)
+
 ### Tech stack:
 
 * Python 3.8
