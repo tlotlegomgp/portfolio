@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-Personal website to showcase my skills and all the projects I've been working on. 
+A personal website to showcase my skills and projects I've been working on. Most of the projects were built using Django.
 
 ![](/index/static/index/img/portfolio.jpg)
 
