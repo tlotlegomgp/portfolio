@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<section style="background-color: #f6f8ff; margin-top: 220px; color: #272d2d;">
+<section style="background-color: #f6f8ff; margin-top: 170px; color: #272d2d;">
     <div class="container" style="padding-bottom: 50px;">
         <div class="text-center">
             <p style="font-family: Arbutus, cursive;font-size: 35px;">Hi, I'm Tlotlego Mogapi.&nbsp;</p>
@@ -17,7 +17,7 @@
         <hr class="text-center" style="padding: 1.2px; background-color: #272d2d; width: 110px; border-radius:500cm;">
     </div>
     <div id = "sectionProjects" class="d-flex d-lg-flex text-center justify-content-center">
-        <h1 style="padding: 30px; margin-top: 20px; margin-bottom:95px;">
+        <h1 style="padding: 30px; margin-top: 10px; margin-bottom:95px;">
             My Projects
         </h1>
     </div>
@@ -27,29 +27,36 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 col-lg-6 text-center">
-                <h3>Personal Portfolio</h3>
+                <h3>Liquid Bug Tracker</h3>
                 <p>
-                    My personal website to showcase my projects built using Python's Django web framework. 
-                    All the source code for each of the projects in the portfolio is linked to their respective 
-                    repositories on Github.
+                    A bug/issue tracker system. The system allows teams to collaboratively work on projects. The site 
+                    allows for 4 types of users, namely, Admin, Project Manager, Developer, and Submitter. 
+                    Admins and Project Managers can create projects and assign roles to members inside the project. 
+                    The Developer user is the only user not able to add tickets to a project. 
+                    All users can add comments and add attachments to a ticket.
                 </p>
                 <ol>
                     <li style="margin-left: -40px; list-style: none;">
-                        <span class = "badge badge-light">Python</span>
                         <span class = "badge badge-light">Django</span>
                         <span class = "badge badge-light">Bootstrap</span>
+                        <span class = "badge badge-light">PostgreSQL</span>
+                        <span class = "badge badge-light">AWS</span>
+                        <span class = "badge badge-light">Heroku</span>
                     </li>
                 </ol>
                 
                 <div class="btn-group" role="group" style="margin: 5px;">
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
+                    <button class="btn btn-sm border-light button-dark" type="button">
+                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                    </button>
+                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-WeatherApp'" 
                         class="btn btn-sm border-light button-dark" type="button">
-                        Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
+                        Source&nbsp;<em class="fa fa-github"></em>
                     </button>
                 </div>
             </div>
             <div class="col-md-12 col-lg-5">
-                <img class="img-fluid" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
+                <img class="img-fluid" alt='project screenshot' src="{% static 'index/img/liquid.jpg' %}" 
                     style="margin-top: 15px;">
             </div>
         </div>
@@ -77,9 +84,9 @@
                 <ol>
                     <li style="margin-left: -40px; list-style: none;">
                         <span class = "badge badge-dark">RESTful API</span>
-                        <span class = "badge badge-dark">Python</span>
                         <span class = "badge badge-dark">Django</span>
                         <span class = "badge badge-dark">Bootstrap</span>
+                        <span class = "badge badge-dark">Heroku</span>
                     </li>
                 </ol>
                 
@@ -101,6 +108,39 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 col-lg-6 text-center">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    My personal website to showcase my projects built using Python's Django web framework. 
+                    All the source code for each of the projects in the portfolio is linked to their respective 
+                    repositories on Github.
+                </p>
+                <ol>
+                    <li style="margin-left: -40px; list-style: none;">
+                        <span class = "badge badge-light">Django</span>
+                        <span class = "badge badge-light">Bootstrap</span>
+                        <span class = "badge badge-light">Heroku</span>
+                    </li>
+                </ol>
+                
+                <div class="btn-group" role="group" style="margin: 5px;">
+                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
+                        class="btn btn-sm border-light button-dark" type="button">
+                        Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-5">
+                <img class="img-fluid" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
+                    style="margin-top: 15px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-6 text-center">
                 <h3>MGP Weather</h3>
                 <p>
                     A weather website that allows users to search for weather conditions in all major cities. 
@@ -113,6 +153,7 @@
                         <span class = "badge badge-light">RESTful API</span>
                         <span class = "badge badge-light">Django</span>
                         <span class = "badge badge-light">Bootstrap</span>
+                        <span class = "badge badge-light">Heroku</span>
                     </li>
                 </ol>
                 
