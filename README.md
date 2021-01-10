@@ -1,7 +1,5 @@
 # Personal Portfolio
 
-https://mzansinews.herokuapp.com/
-
 Personal website to showcase my skills and all the projects I've been working on. 
 
 ### Tech stack:
