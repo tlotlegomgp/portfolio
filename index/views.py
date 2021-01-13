@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from . forms import ContactForm
 from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -15,7 +16,10 @@ def home_view(request):
             message = form.cleaned_data["message"]
 
 # Process Email send
-            send_mail(subject, message, email, ['tlotlegomgp@gmail.com'])
+            try:
+                send_mail(subject, message, email, ['tlotlegomgp@gmail.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
             return render(request, 'index/email_sent.html')
 
     # Else Present empty form to user
