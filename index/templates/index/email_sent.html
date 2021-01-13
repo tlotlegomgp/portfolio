@@ -1,19 +1,17 @@
 {% extends "index/header.html" %} {% block content %}
 
-<br /><br /><br /><br />
-<section>
+<section style="margin-top: 120px;">
 	<div
 		class="d-flex d-lg-flex justify-content-center align-items-center"
-		data-aos="fade-up"
-		data-aos-duration="1000"
-		data-aos-delay="100"
-		style="padding: 50px"
+		style="padding: 50px" 
+		style="color: #272d2d;"
 	>
-		<h1 style="color: #272d2d; font-family: Montserrat">Your Email Has Been Recieved</h1>
+		<h1 >Your Email Has Been Recieved</h1>
 		<br /><br />
-		<p style="color: #272d2d; font-family: Montserrat; font-size: medium">
+		<p style="font-size: medium">
 			Thank you for your interest in my work. I will respond back to you within the next 48 hours...
 		</p>
+		<a href="{% url 'index' %}">← Back to Home Page</a>
 	</div>
 </section>
 
