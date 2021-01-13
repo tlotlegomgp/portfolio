@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from . forms import ContactForm
 from django.core.mail import BadHeaderError, send_mail
-from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 

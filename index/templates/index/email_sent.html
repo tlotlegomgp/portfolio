@@ -1,17 +1,17 @@
 {% extends "index/header.html" %} {% block content %}
 
-<section style="margin-top: 120px;">
+<section style="margin-top: 140px;">
 	<div
-		class="d-flex d-lg-flex justify-content-center align-items-center"
+		class="align-items-center text-center"
 		style="padding: 50px" 
 		style="color: #272d2d;"
 	>
-		<h1 >Your Email Has Been Recieved</h1>
-		<br /><br />
-		<p style="font-size: medium">
+		<h2 >Your Email Has Been Recieved!</h2>
+		<br /><br>
+		<h5>
 			Thank you for your interest in my work. I will respond back to you within the next 48 hours...
-		</p>
-		<a href="{% url 'index' %}">← Back to Home Page</a>
+		</h5>
+		<a href="{% url 'index' %}" style="color: #272d2d;">← Back to Home Page</a>
 	</div>
 </section>
 
