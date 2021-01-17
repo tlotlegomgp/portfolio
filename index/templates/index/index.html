@@ -107,29 +107,32 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-12 col-lg-6 text-center">
-                <h3>Personal Portfolio</h3>
+                <h3>MGP Bot</h3>
                 <p>
-                    A personal website to showcase my skills and projects I've been working on. 
-                    Most of the projects were built using Django. All the source code for the projects 
-                    in the portfolio is on Github.
+                    A Django and Python chatbot webapp. Users can ask the bot any number of questions about me. 
+                    Trained the model with Tensorflow 2, based of a series of questions people ask me on a regular.
                 </p>
                 <ol>
                     <li style="margin-left: -40px; list-style: none;">
                         <span class = "badge badge-light">Django</span>
-                        <span class = "badge badge-light">Bootstrap</span>
+                        <span class = "badge badge-light">Tensorflow</span>
+                        <span class = "badge badge-light">Python</span>
                         <span class = "badge badge-light">Heroku</span>
                     </li>
                 </ol>
                 
                 <div class="btn-group" role="group" style="margin: 5px;">
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
+                    <button class="btn btn-sm border-light button-dark" type="button">
+                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                    </button>
+                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/chatbot'" 
                         class="btn btn-sm border-light button-dark" type="button">
                         Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
                     </button>
                 </div>
             </div>
             <div class="col-md-12 col-lg-6">
-                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
+                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/chatbot.jpg' %}" 
                     style="margin-top: 15px;">
             </div>
         </div>
@@ -169,6 +172,39 @@
                         Source&nbsp;<em class="fa fa-github"></em>
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-dark">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-lg-6 text-center">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A personal website to showcase my skills and projects I've been working on. 
+                    Most of the projects were built using Django. All the source code for the projects 
+                    in the portfolio is on Github.
+                </p>
+                <ol>
+                    <li style="margin-left: -40px; list-style: none;">
+                        <span class = "badge badge-light">Django</span>
+                        <span class = "badge badge-light">Bootstrap</span>
+                        <span class = "badge badge-light">Heroku</span>
+                    </li>
+                </ol>
+                
+                <div class="btn-group" role="group" style="margin: 5px;">
+                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
+                        class="btn btn-sm border-light button-dark" type="button">
+                        Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
+                    style="margin-top: 15px;">
             </div>
         </div>
     </div>
