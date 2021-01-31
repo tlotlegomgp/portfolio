@@ -2,65 +2,159 @@
 {% load static %}
 {% block content %}
 
-<section style="background-color: #f6f8ff; margin-top: 170px; color: #272d2d;">
-    <div class="container" style="padding-bottom: 50px;">
-        <div class="text-center">
-            <p style="font-family: Arbutus, cursive;font-size: 35px;">Hi, I'm Tlotlego Mogapi.&nbsp;</p>
+<section>
+    <div class="container" style="margin-top: 40px;">
+        <div class="row" style="padding: 35px;">
+            <div class="col-lg-12 text-center" style="margin-bottom: 50px">
+                <div class="text-center">
+                    <p style="font-family: Arbutus, cursive;font-size: 35px;">Hi, I'm Tlotlego Mogapi.&nbsp;</p>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center" style="margin-bottom: 20px">
+                <h5 class="text-center" style="font-family: Montserrat;">
+                    I'm a software developer based in Johannesburg. I enjoy working on fun projects 
+                    and wish to bring together the skills I've aquired to turn complex problems into simple solutions.
+                </h5>
+            </div>
+            <hr class="text-center" style="padding: 1.2px; background-color: #272d2d; width: 110px; border-radius:500cm;">
+            <div class="col-lg-12 text-center justify-content-center align-items-center" style="margin-top: 60px">
+                <a class="btn js-scroll-trigger text-uppercase" href="#portfolio" role="button" style="background: #272d2d; color: rgb(170, 213, 206)">See More</a>
+            </div>
         </div>
-        <div class="text-center" style="padding: 30px; padding-top: 60px; padding-bottom: 70px;">
-            <p style="font-size:x-large">
-                I'm a software developer based in Johannesburg. I enjoy working on fun projects 
-                and wish to bring together the skills I've aquired to turn complex problems into simple solutions.
-            </p>
-        </div>
-        <hr class="text-center" style="padding: 1.2px; background-color: #272d2d; width: 110px; border-radius:500cm;">
-    </div>
-    <div id = "sectionProjects" class="d-flex d-lg-flex text-center justify-content-center">
-        <h1 style="padding: 30px; margin-top: 10px; margin-bottom:95px;">
-            My Projects
-        </h1>
     </div>
 </section>
 
-<section class="section-dark">
+<section id="portfolio" class="bg-light" style="padding: 20px;">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-6 text-center">
-                <h3>Liquid Bug Tracker</h3>
-                <p>
-                    A bug tracker web-app that keeps track of reported software bugs or issues in software development
-                     projects. Helps teams collaborate and get work done easily and more efficiently. 
-                     The system has a per-project role-based access control for users. The system allows for 4 types 
-                     of users; Admin, Project Manager, Developer, and Submitter.<br><br>
-                     Site hosted on Heroku's free plan. Might take a moment to open on first launch.
-                </p>
-                <ol>
-                    <li style="margin-left: -40px; list-style: none;">
-                        <span class = "badge badge-light">Django</span>
-                        <span class = "badge badge-light">PostgreSQL</span>
-                        <span class = "badge badge-light">AWS</span>
-                        <span class = "badge badge-light">Heroku</span>
-                        <span class = "badge badge-light">Bootstrap</span>
-                    </li>
-                </ol>
-                
-                <div class="btn-group" role="group" style="margin: 5px;">
-                    <button class="btn btn-sm border-light button-dark" type="button">
-                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
-                    </button>
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-WeatherApp'" 
-                        class="btn btn-sm border-light button-dark" type="button">
-                        Source&nbsp;<em class="fa fa-github"></em>
-                    </button>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-uppercase section-heading" style="margin-bottom: 70px; margin-top: 30px">Projects</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#liquidModal">
+                    <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
+                        <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'index/img/liquid.jpg' %}" alt="liquid-thumb">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Liquid</h4>
+                    <p class="text-muted" style="font-family: Montserrat;">
+                        Django issue tracking web-app.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-12 col-lg-6">
-                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/liquid.jpg' %}" 
-                    style="margin-top: 15px;">
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#mzansiModal">
+                    <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
+                        <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'index/img/chatbot.jpg' %}" alt="chatbot-thumb">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Mzansi News</h4>
+                    <p class="text-muted" style="font-family: Montserrat;">
+                        Django news web-app. Uses RESTFUL API.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#chatbotModal">
+                    <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
+                        <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'index/img/mzansi.jpg' %}" alt="mzansi-thumb">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>MGP Bot</h4>
+                    <p class="text-muted" style="font-family: Montserrat;">
+                        Django and Tensorflow chatbot web-app.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#weatherModal">
+                    <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
+                        <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'index/img/weather.jpg' %}" alt="weather-thumb">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>4-Cast</h4>
+                    <p class="text-muted" style="font-family: Montserrat;">
+                        Django weather web-app. Uses RESTFUL API.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal">
+                    <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
+                        <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
+                    </div>
+                    <img class="img-fluid img-fluid" src="{% static 'index/img/portfolio.jpg' %}" alt="portfolio-thumb">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>tlotlegoMGP</h4>
+                    <p class="text-muted" style="font-family: Montserrat;">
+                        Personal website to showcase my work. Yes, the very website you on.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="liquidModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h3>Liquid Bug Tracker</h3>
+                            <p>
+                                A bug tracker web-app that keeps track of reported software bugs or issues in software development
+                                    projects. Helps teams collaborate and get work done easily and more efficiently. 
+                                    The system has a per-project role-based access control for users. The system allows for 4 types 
+                                    of users; Admin, Project Manager, Developer, and Submitter.<br><br>
+                                    Site hosted on Heroku's free plan. Might take a moment to open on first launch.
+                            </p>
+                            <ol>
+                                <li style="margin-left: -40px; list-style: none;">
+                                    <span class = "badge badge-dark">Django</span>
+                                    <span class = "badge badge-dark">PostgreSQL</span>
+                                    <span class = "badge badge-dark">AWS</span>
+                                    <span class = "badge badge-dark">Heroku</span>
+                                </li>
+                            </ol>
+                            
+                            <div class="btn-group" role="group" style="margin: 5px;">
+                                <button class="btn button-dark" type="button">
+                                    &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                                </button>
+                                <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-WeatherApp'" 
+                                    class="btn button-dark" type="button">
+                                    Source&nbsp;<em class="fa fa-github"></em>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/liquid.jpg' %}" 
+                                style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    <div class="row" style="float: right; margin-right: 50px;">
+                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
+                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <section class = "section-light">
     <div class="container">
