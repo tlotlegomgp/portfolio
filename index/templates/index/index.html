@@ -3,7 +3,7 @@
 {% block content %}
 
 <section>
-    <div class="container" style="margin-top: 40px;">
+    <div class="container" style="margin-top: 20px;">
         <div class="row" style="padding: 35px;">
             <div class="col-lg-12 text-center" style="margin-bottom: 50px">
                 <div class="text-center">
@@ -51,7 +51,7 @@
                     <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
                         <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
                     </div>
-                    <img class="img-fluid" src="{% static 'index/img/chatbot.jpg' %}" alt="chatbot-thumb">
+                    <img class="img-fluid" src="{% static 'index/img/mzansi.jpg' %}" alt="chatbot-thumb">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Mzansi News</h4>
@@ -65,7 +65,7 @@
                     <div class="portfolio-hover" style="background-color: rgba(39,45,45, 0.7)">
                         <div class="portfolio-hover-content"><em class="fa fa-plus fa-3x"></em></div>
                     </div>
-                    <img class="img-fluid" src="{% static 'index/img/mzansi.jpg' %}" alt="mzansi-thumb">
+                    <img class="img-fluid" src="{% static 'index/img/chatbot.jpg' %}" alt="mzansi-thumb">
                 </a>
                 <div class="portfolio-caption">
                     <h4>MGP Bot</h4>
@@ -103,6 +103,42 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 justify-content-center align-items-center" style=" margin-top: 150px; height: 80px;">
+                <h3 class="text-center" style="color: #272d2d;">
+                    Like what you see?
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="sectionContact">
+    <div class="contact-clean" style="background-color: #f6f8ff; height: 400px; margin-top: -100px;">
+        <form method="POST" action="{% url 'index' %}"> {% csrf_token %}
+            <h2 class="text-center">Contact me</h2>
+            <div class="form-group">
+                {{ form.subject }}
+            </div>
+            <div class="form-group">
+                {% for message in messages %}
+                <div class="alert alert-danger">
+                    <a class="close" href="#" data-dismiss="alert">×</a>
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                {{ form.message }}
+            </div>
+            <div class="form-group">
+                <button class="btn btn-sm border-light" type="submit" 
+                    style="background-color: rgb(170, 213, 206);color: #272d2d;">send
+                </button>
+            </div>
+        </form>
     </div>
 </section>
 
@@ -156,194 +192,200 @@
     </div>
 </div>
 
-<section class = "section-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-6">
-                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/mzansi.jpg' %}" 
-                    style="margin-top: 15px;">
-            </div>
-            <div class="col-md-12 col-lg-6 text-center">
-                <h3 style="margin: 25px;">
-                    Mzansi News
-                </h3>
-                <p>
-                    A news articles website. Gathers all the headlines from all the major news networks. 
-                    Users can sign up to get access to the site's search functionality, which allows them to 
-                    search for news based on location, category, or topic. Made use of NEWS-API to make calls 
-                    for the data. <br><br>
-                    Runs on Heroku's free plan. Might take a moment to open on first launch.
-                </p>
-                <ol>
-                    <li style="margin-left: -40px; list-style: none;">
-                        <span class = "badge badge-dark">RESTful API</span>
-                        <span class = "badge badge-dark">Django</span>
-                        <span class = "badge badge-dark">Bootstrap</span>
-                        <span class = "badge badge-dark">Heroku</span>
-                    </li>
-                </ol>
-                
-                <div class="btn-group" role="group" style="margin: 5px;">
-                    <button class="btn btn-sm button-dark" type="button">
-                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
-                    </button>
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/tlotlego-news_app'" 
-                        target="_blank" class="btn btn-sm button-dark" type="button">
-                        Source&nbsp;<em class="fa fa-github"></em>
-                    </button>
+<div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="mzansiModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h3 style="margin: 25px;">
+                                Mzansi News
+                            </h3>
+                            <p>
+                                A news articles website. Gathers all the headlines from all the major news networks. 
+                                Users can sign up to get access to the site's search functionality, which allows them to 
+                                search for news based on location, category, or topic. Made use of NEWS-API to make calls 
+                                for the data. <br><br>
+                                Runs on Heroku's free plan. Might take a moment to open on first launch.
+                            </p>
+                            <ol>
+                                <li style="margin-left: -40px; list-style: none;">
+                                    <span class = "badge badge-dark">RESTful API</span>
+                                    <span class = "badge badge-dark">Django</span>
+                                    <span class = "badge badge-dark">Bootstrap</span>
+                                    <span class = "badge badge-dark">Heroku</span>
+                                </li>
+                            </ol>
+                            
+                            <div class="btn-group" role="group" style="margin: 5px;">
+                                <button class="btn button-dark" type="button">
+                                    &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                                </button>
+                                <button onclick="location.href='https://github.com/Dark-Matter-crypto/tlotlego-news_app'" 
+                                    target="_blank" class="btn button-dark" type="button">
+                                    Source&nbsp;<em class="fa fa-github"></em>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/mzansi.jpg' %}" 
+                                style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    <div class="row" style="float: right; margin-right: 50px;">
+                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
+                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="section-dark">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-6 text-center">
-                <h3>MGP Bot</h3>
-                <p>
-                    A Django and Python chatbot webapp. Users can ask the bot any number of questions about me. 
-                    Trained the model with Tensorflow 2, based of a series of questions people ask me on a regular.
-                </p>
-                <ol>
-                    <li style="margin-left: -40px; list-style: none;">
-                        <span class = "badge badge-light">Django</span>
-                        <span class = "badge badge-light">Tensorflow</span>
-                        <span class = "badge badge-light">Python</span>
-                        <span class = "badge badge-light">Heroku</span>
-                    </li>
-                </ol>
-                
-                <div class="btn-group" role="group" style="margin: 5px;">
-                    <button class="btn btn-sm border-light button-dark" type="button">
-                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
-                    </button>
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/chatbot'" 
-                        class="btn btn-sm border-light button-dark" type="button">
-                        Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-6">
-                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/chatbot.jpg' %}" 
-                    style="margin-top: 15px;">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class = "section-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-6">
-                <img class="img-fluid center img-thumbnail" alt='project screenshot' src="{% static 'index/img/weather.jpg' %}" 
-                    style="margin-top: 15px;">
-            </div>
-            <div class="col-md-12 col-lg-6 text-center">
-                <h3>MGP Weather</h3>
-                <p>
-                    A weather forecast app. Allows users to search for the weather in any major city in the world. 
-                    Made use of OpenWeatherMap-API to make calls for the data.
-                    <br><br>
-                    Hosted on Heroku using a free plan. Site might take a moment to open on first launch.
-                </p>
-                <ol>
-                    <li style="margin-left: -40px; list-style: none;">
-                        <span class = "badge badge-light">RESTful API</span>
-                        <span class = "badge badge-light">Django</span>
-                        <span class = "badge badge-light">Bootstrap</span>
-                        <span class = "badge badge-light">Heroku</span>
-                    </li>
-                </ol>
-                
-                <div class="btn-group" role="group" style="margin: 5px;">
-                    <button class="btn btn-sm border-light button-dark" type="button">
-                        &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
-                    </button>
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-WeatherApp'" 
-                        class="btn btn-sm border-light button-dark" type="button">
-                        Source&nbsp;<em class="fa fa-github"></em>
-                    </button>
+<div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="chatbotModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h3>MGP Bot</h3>
+                            <p>
+                                A Django and Python chatbot webapp. Users can ask the bot any number of questions about me. 
+                                Trained the model with Tensorflow 2, based of a series of questions people ask me on a regular.
+                            </p>
+                            <ol>
+                                <li style="margin-left: -40px; list-style: none;">
+                                    <span class = "badge badge-dark">Django</span>
+                                    <span class = "badge badge-dark">Tensorflow</span>
+                                    <span class = "badge badge-dark">Python</span>
+                                    <span class = "badge badge-dark">Heroku</span>
+                                </li>
+                            </ol>
+                            
+                            <div class="btn-group" role="group" style="margin: 5px;">
+                                <button class="btn button-dark" type="button">
+                                    &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                                </button>
+                                <button onclick="location.href='https://github.com/Dark-Matter-crypto/chatbot'" 
+                                    class="btn button-dark" type="button">
+                                    Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/chatbot.jpg' %}" 
+                                style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    <div class="row" style="float: right; margin-right: 50px;">
+                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
+                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="section-dark">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-6 text-center">
-                <h3>Personal Portfolio</h3>
-                <p>
-                    A personal website to showcase my skills and projects I've been working on. 
-                    Most of the projects were built using Django. All the source code for the projects 
-                    in the portfolio is on Github.
-                </p>
-                <ol>
-                    <li style="margin-left: -40px; list-style: none;">
-                        <span class = "badge badge-light">Django</span>
-                        <span class = "badge badge-light">Bootstrap</span>
-                        <span class = "badge badge-light">Heroku</span>
-                    </li>
-                </ol>
-                
-                <div class="btn-group" role="group" style="margin: 5px;">
-                    <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
-                        class="btn btn-sm border-light button-dark" type="button">
-                        Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
-                    </button>
+<div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="weatherModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h3>MGP Weather</h3>
+                            <p>
+                                A weather forecast app. Allows users to search for the weather in any major city in the world. 
+                                Made use of OpenWeatherMap-API to make calls for the data.
+                                <br><br>
+                                Hosted on Heroku using a free plan. Site might take a moment to open on first launch.
+                            </p>
+                            <ol>
+                                <li style="margin-left: -40px; list-style: none;">
+                                    <span class = "badge badge-dark">RESTful API</span>
+                                    <span class = "badge badge-dark">Django</span>
+                                    <span class = "badge badge-dark">Bootstrap</span>
+                                    <span class = "badge badge-dark">Heroku</span>
+                                </li>
+                            </ol>
+                            
+                            <div class="btn-group" role="group" style="margin: 5px;">
+                                <button class="btn button-dark" type="button">
+                                    &nbsp; &nbsp; Live&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                                </button>
+                                <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-WeatherApp'" 
+                                    class="btn button-dark" type="button">
+                                    Source&nbsp;<em class="fa fa-github"></em>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/weather.jpg' %}" 
+                                style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    <div class="row" style="float: right; margin-right: 50px;">
+                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
+                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-12 col-lg-6">
-                <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
-                    style="margin-top: 15px;">
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section>
-    <div class = "justify-content-center align-items-center" style="padding: 20px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" style="margin-top: 80px; margin-bottom: 30px;">
-                    <h3 class="text-center" style="color: #272d2d;">
-                        Like what you see?
-                    </h3>
+<div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="portfolioModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6 text-center">
+                                    <h3>Personal Portfolio</h3>
+                                    <p>
+                                        A personal website to showcase my skills and projects I've been working on. 
+                                        Most of the projects were built using Django. All the source code for the projects 
+                                        in the portfolio is on Github.
+                                    </p>
+                                    <ol>
+                                        <li style="margin-left: -40px; list-style: none;">
+                                            <span class = "badge badge-light">Django</span>
+                                            <span class = "badge badge-light">Bootstrap</span>
+                                            <span class = "badge badge-light">Heroku</span>
+                                        </li>
+                                    </ol>
+                                    
+                                    <div class="btn-group" role="group" style="margin: 5px;">
+                                        <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
+                                            class="btn btn-sm border-light button-dark" type="button">
+                                            Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
+                                        style="margin-top: 15px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="float: right; margin-right: 50px;">
+                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
+                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-<section id = "sectionContact">
-    <div class="contact-clean" style="background-color: #f6f8ff;">
-        <form method="POST" action="{% url 'index' %}"> {% csrf_token %}
-            <h2 class="text-center">Contact me</h2>
-            <div class="form-group">
-                {{ form.subject }}
-            </div>
-            <div class="form-group">
-                {% for message in messages %}
-                <div class="alert alert-danger">
-                    <a class="close" href="#" data-dismiss="alert">×</a>
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {{ form.email }}
-            </div>
-            <div class="form-group">
-                {{ form.message }}
-            </div>
-            <div class="form-group">
-                <button class="btn btn-sm border-light" type="submit" 
-                    style="background-color: rgb(170, 213, 206);color: #272d2d;">send
-                </button>
-            </div>
-        </form>
-    </div>
-</section>
+</div>
 
 {% endblock %}

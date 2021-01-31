@@ -7,15 +7,15 @@
 		<title>Tlotlego Mogapi</title>
 		<link rel="stylesheet" href="{% static 'index/bootstrap/css/bootstrap.min.css' %}">
 		<link rel="stylesheet" href="{% static 'index/css/styles.min.css' %}" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 		<link rel="shortcut icon" type="image/jpg" href="{% static 'index/favicon/portfolio.jpg' %}"/>
 		
 		<style type="text/css">
-
 			.button-dark {
 				background-color: #272d2d;color: rgb(255, 255, 255); border-color: rgb(170, 213, 206);
 			}
@@ -30,23 +30,26 @@
 		</style>
 	</head>
 
-	<body id="page-top">
+	<body id="page-top" style="background-color: rgb(248, 249, 250);">
 		<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="background: #272d2d;border-color: #272d2d;">
 			<div class="container">
 				<a
 					class="navbar-brand"
 					href="{% url 'index' %}"
-					style="color: rgb(170, 213, 206);font-size: 20px; font-family: 'Alfa Slab One', cursive"
+					style="color: rgb(170, 213, 206);"
 					>tlotlegoMGP
 				</a>
-				<button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background: rgb(171, 209, 205);color: #272d2d;"><i class="fa fa-bars"></i>
+				<button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" 
+					type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" 
+					aria-label="Toggle navigation" style="background: rgb(171, 209, 205);color: #272d2d; margin-right: 4px;">
+					<em class="fa fa-bars"></em>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="nav navbar-nav ml-auto text-uppercase">
 						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PROJECTS</a></li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a></li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% static 'index/docs/TlotlegoMogapi.pdf' %}" target="_blank">CV</a></li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://github.com/Dark-Matter-crypto" target="_blank" rel="noopener noreferrer">Github&nbsp;<em class="fa fa-github" style="font-size: 14px;"></em></a></li>
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sectionContact">CONTACT</a></li>
+						<li class="nav-item"><a class="nav-link" href="{% static 'index/docs/TlotlegoMogapi.pdf' %}" target="_blank">CV</a></li>
+						<li class="nav-item"><a class="nav-link" href="https://github.com/Dark-Matter-crypto" target="_blank" rel="noopener noreferrer">Github&nbsp;<em class="fa fa-github" style="font-size: 14px;"></em></a></li>
 					</ul>
 				</div>
 			</div>
@@ -60,14 +63,15 @@
 		<div class="main">{% block content %} {% endblock %}</div>
 
 		<footer>
+			<hr style="background-color: #272d2d; margin-bottom: 30px;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<a href="tel:072-864-3592" style="color: #272d2d;">
+						<a href="tel:072-864-3592" style="color: #272d2d; padding-top: 5px;">
 							<em class="fa fa-phone"></em>&nbsp;072-864-3592
 						</a>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-4" style="padding-top: 5px;">
 						<ul class="list-inline social-buttons">
 							<li class="list-inline-item">
 								<a href="#" target="_blank" style="background: #272d2d">
@@ -87,7 +91,7 @@
 						</ul>
 					</div>
 					<div class="col-md-4">
-						<a href="mailto:tlotlegomgp@gmail.com" style="color: #272d2d;">
+						<a href="mailto:tlotlegomgp@gmail.com" style="color: #272d2d; padding-top: 5px;">
 							<em class="fa fa-envelope"></em>&nbsp;tlotlegomgp@gmail.com
 						</a>
 					</div>
