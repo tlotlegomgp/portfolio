@@ -1,5 +1,6 @@
+{% load static %}
 <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="liquidModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="container">
@@ -37,11 +38,7 @@
                                 style="margin-top: 15px;">
                         </div>
                     </div>
-                    <div class="row" style="float: right; margin-right: 50px;">
-                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
-                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
-                        </button>
-                    </div>
+                    {% include 'index/snippets/close_modal_button.html' %}
                 </div>
             </div>
         </div>
@@ -49,7 +46,7 @@
 </div>
 
 <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="mzansiModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="container">
@@ -89,11 +86,7 @@
                                 style="margin-top: 15px;">
                         </div>
                     </div>
-                    <div class="row" style="float: right; margin-right: 50px;">
-                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
-                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
-                        </button>
-                    </div>
+                    {% include 'index/snippets/close_modal_button.html' %}
                 </div>
             </div>
         </div>
@@ -101,7 +94,7 @@
 </div>
 
 <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="chatbotModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="container">
@@ -136,11 +129,7 @@
                                 style="margin-top: 15px;">
                         </div>
                     </div>
-                    <div class="row" style="float: right; margin-right: 50px;">
-                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
-                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
-                        </button>
-                    </div>
+                    {% include 'index/snippets/close_modal_button.html' %}
                 </div>
             </div>
         </div>
@@ -148,7 +137,7 @@
 </div>
 
 <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="weatherModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="container">
@@ -185,11 +174,7 @@
                                 style="margin-top: 15px;">
                         </div>
                     </div>
-                    <div class="row" style="float: right; margin-right: 50px;">
-                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
-                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
-                        </button>
-                    </div>
+                    {% include 'index/snippets/close_modal_button.html' %}
                 </div>
             </div>
         </div>
@@ -197,47 +182,39 @@
 </div>
 
 <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="portfolioModal">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="row">
-                                <div class="col-md-12 col-lg-6 text-center">
-                                    <h3>Personal Portfolio</h3>
-                                    <p>
-                                        A personal website to showcase my skills and projects I've been working on. 
-                                        Most of the projects were built using Django. All the source code for the projects 
-                                        in the portfolio is on Github.
-                                    </p>
-                                    <ol>
-                                        <li style="margin-left: -40px; list-style: none;">
-                                            <span class = "badge badge-light">Django</span>
-                                            <span class = "badge badge-light">Bootstrap</span>
-                                            <span class = "badge badge-light">Heroku</span>
-                                        </li>
-                                    </ol>
-                                    
-                                    <div class="btn-group" role="group" style="margin: 5px;">
-                                        <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
-                                            class="btn btn-sm border-light button-dark" type="button">
-                                            Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-lg-6">
-                                    <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
-                                        style="margin-top: 15px;">
-                                </div>
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h3>Personal Portfolio</h3>
+                            <p>
+                                A personal website to showcase my skills and projects I've been working on. 
+                                Most of the projects were built using Django. All the source code for the projects 
+                                in the portfolio is on Github.
+                            </p>
+                            <ol>
+                                <li style="margin-left: -40px; list-style: none;">
+                                    <span class = "badge badge-dark">Django</span>
+                                    <span class = "badge badge-dark">Bootstrap</span>
+                                    <span class = "badge badge-dark">Heroku</span>
+                                </li>
+                            </ol>
+                            
+                            <div class="btn-group" role="group" style="margin: 5px;">
+                                <button onclick="location.href='https://github.com/Dark-Matter-crypto/Tlotlego-Portfolio'" 
+                                    class="btn btn-sm border-light button-dark" type="button">
+                                    Source&nbsp;<em class="fa fa-github" style="color: rgb(255, 255, 255);"></em>
+                                </button>
                             </div>
                         </div>
+                        <div class="col-md-12 col-lg-6">
+                            <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/portfolio.jpg' %}" 
+                                style="margin-top: 15px;">
+                        </div>
                     </div>
-                    <div class="row" style="float: right; margin-right: 50px;">
-                        <button class="btn" data-dismiss="modal" type="button" style="background: #272d2d; color: aliceblue;">
-                            <em class="fa fa-times"></em><span>&nbsp;Close</span>
-                        </button>
-                    </div>
+                    {% include 'index/snippets/close_modal_button.html' %}
                 </div>
             </div>
         </div>
