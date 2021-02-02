@@ -73,39 +73,4 @@
 	margin-top: 15px;
 	color: #fff;
 }
-.page-footer {
-	padding-top: 35px;
-	border-top: 1px solid #272d2d;
-	text-align: center;
-	padding-bottom: 20px;
-}
-.page-footer a {
-	margin: 0 10px;
-	color: #282b2d;
-	font-size: 18px;
-}
-.page-footer .links,
-.page-footer a {
-	display: inline-block;
-}
-.page-footer .social-icons {
-	margin-top: 20px;
-	margin-bottom: 16px;
-}
-.page-footer .social-icons a {
-	font-size: 18px;
-	margin: 0 3px;
-	color: #fff;
-	border: 1px solid;
-	opacity: 0.75;
-	border-radius: 50%;
-	width: 36px;
-	display: inline-block;
-	height: 36px;
-	text-align: center;
-	background-color: #c5c9d2;
-	line-height: 34px;
-}
-.page-footer .social-icons a:hover {
-	opacity: 1;
-}
+
