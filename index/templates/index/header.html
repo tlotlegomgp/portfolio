@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
-		<link rel="shortcut icon" type="image/jpg" href="{% static 'index/favicon/portfolio.jpg' %}"/>
+		<link rel="shortcut icon" type="image/png" href="{% static 'index/favicon/portfolio.png' %}"/>
 		
 		<style type="text/css">
 			.button-dark {
@@ -22,7 +22,7 @@
 			}
 
 			.badge-dark {
-				background-color: #272d2d; padding: 6px;
+				background-color: grey; color: white; padding: 4px; font-family: Montserrat;
 			}
 
 			p {
@@ -32,29 +32,7 @@
 	</head>
 
 	<body id="page-top" style="background-color: rgb(248, 249, 250);">
-		<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="background: #272d2d;border-color: #272d2d;">
-			<div class="container">
-				<a
-					class="navbar-brand"
-					href="{% url 'index' %}"
-					style="color: #fdb479;font-size: 20px; font-family: 'Alfa Slab One', cursive"
-					>tlotlegoMGP
-				</a>
-				<button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" 
-					type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" 
-					aria-label="Toggle navigation" style="background: #fdb479;color: #272d2d;margin-right: 4px;">
-					<em class="fa fa-bars"></em>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="nav navbar-nav ml-auto text-uppercase">
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PROJECTS</a></li>
-						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sectionContact">CONTACT</a></li>
-						<li class="nav-item"><a class="nav-link" href="{% static 'index/docs/TlotlegoMogapi.pdf' %}" target="_blank">&nbsp;CV&nbsp;</a></li>
-						<li class="nav-item"><a class="nav-link" href="https://github.com/Dark-Matter-crypto" target="_blank" rel="noopener noreferrer">Github&nbsp;<em class="fa fa-github" style="font-size: 14px;"></em></a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		{% include 'index/snippets/navbar.html' %}
 		<style>
 			.main {
 				min-height: 61vh; height: 100%;
@@ -63,42 +41,9 @@
 
 		<div class="main">{% block content %} {% endblock %}</div>
 
-		<footer>
-			<hr style="background-color: #272d2d; margin-bottom: 15px;">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4" style="margin-top: 8px">
-						<a href="tel:072-864-3592" style="color: #272d2d;">
-							<em class="fa fa-phone"></em>&nbsp;072-864-3592
-						</a>
-					</div>
-					<div class="col-md-4" style="padding-top: 5px;">
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item">
-								<a href="#" target="_blank" rel="noopener noreferrer">
-									<em class="fa fa-twitter"></em>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="https://github.com/Dark-Matter-crypto" target="_blank" rel="noopener noreferrer">
-									<em class="fa fa-github-alt"></em>
-								</a>
-							</li>
-							<li class="list-inline-item">
-								<a href="https://t.me/tlotlegomgp" target="_blank" rel="noopener noreferrer">
-									<em class="fa fa-telegram"></em>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-4" style="margin-top: 8px;">
-						<a href="mailto:tlotlegomgp@gmail.com" style="color: #272d2d;">
-							<em class="fa fa-envelope"></em>&nbsp;tlotlegomgp@gmail.com
-						</a>
-					</div>
-				</div>
-			</div>
-		</footer>
+		{% include 'index/snippets/footers.html' %}
+
+		{% include 'index/snippets/modals.html' %}
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>

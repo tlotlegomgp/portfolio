@@ -11,11 +11,11 @@ def home_view(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data["subject"]
             email = form.cleaned_data["email"]
+            subject = form.cleaned_data["subject"]
             message = form.cleaned_data["message"]
 
-# Process Email send
+            # Process Email send
             try:
                 send_mail(subject, message, email, ['tlotlegomgp@gmail.com'])
             except BadHeaderError:

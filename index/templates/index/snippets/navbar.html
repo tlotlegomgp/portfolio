@@ -1,0 +1,24 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="background: #272d2d;border-color: #272d2d;">
+    <div class="container">
+        <a
+            class="navbar-brand"
+            href="{% url 'index' %}"
+            style="color: #fdb479;font-size: 20px; font-family: 'Alfa Slab One', cursive"
+            >tlotlegoMGP
+        </a>
+        <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" 
+            type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" 
+            aria-label="Toggle navigation" style="background: #fdb479;color: #272d2d;margin-right: 4px;">
+            <em class="fa fa-bars"></em>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto text-uppercase">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">PROJECTS</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#sectionContact">CONTACT</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% static 'index/docs/TlotlegoMogapi.pdf' %}" target="_blank">&nbsp;CV&nbsp;</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="https://github.com/Dark-Matter-crypto" target="_blank" rel="noopener noreferrer">Github&nbsp;<em class="fa fa-github" style="font-size: 14px;"></em></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
