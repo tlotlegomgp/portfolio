@@ -6,11 +6,6 @@
   "start_url": "/",
   "background_color": "#272d2d",
   "theme_color": "#272d2d",
-  "icons": [{
-    "src": "../index/static/index/favicon/portfolio.png",
-    "sizes": "256x256",
-    "type": "image/png"
-  }],
   "screenshots": [
     {
       "src": "../index/static/index/img/portfolio.jpg",

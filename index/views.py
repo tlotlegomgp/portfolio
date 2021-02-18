@@ -15,7 +15,7 @@ def home_view(request):
             subject = form.cleaned_data["subject"]
             message = form.cleaned_data["message"]
 
-            message = "from: " + email + "\n" + message
+            message = "from: " + email + "\n\n" + message
 
             # Process Email send
             try:
