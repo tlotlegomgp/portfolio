@@ -4,6 +4,7 @@
   "description": "Tlotlego Mogapi Personal Website.",
   "scope": "/",
   "start_url": "/",
+  "display": "minimal-ui",
   "background_color": "#272d2d",
   "theme_color": "#272d2d",
   "screenshots": [
@@ -11,6 +12,13 @@
       "src": "../index/static/index/img/portfolio.jpg",
       "type": "image/jpg",
       "sizes": "1231x692"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/static/index/favicon/portfolio.8b4580b9e26b.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ]
 }
