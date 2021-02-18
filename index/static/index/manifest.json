@@ -3,7 +3,7 @@
     "name": "tlotlegomgp portfolio",
     "icons": [
       {
-        "src": "/index/static/favicon/portfolio.png",
+        "src": "../index/static/favicon/portfolio.png",
         "type": "image/png",
         "sizes": "192x192"
       }
@@ -19,7 +19,7 @@
     "description": "Tlotlego Mogapi's Personal Website.",
     "screenshots": [
       {
-        "src": "/index/static/img/portfolio.jpg",
+        "src": "../index/static/img/portfolio.jpg",
         "type": "image/jpg",
         "sizes": "540x720"
       }
