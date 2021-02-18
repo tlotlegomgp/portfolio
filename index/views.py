@@ -15,6 +15,8 @@ def home_view(request):
             subject = form.cleaned_data["subject"]
             message = form.cleaned_data["message"]
 
+            message = "from: " + email + "\n" + message
+
             # Process Email send
             try:
                 send_mail(subject, message, email, ['tlotlegomgp@gmail.com'])
