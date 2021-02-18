@@ -1,27 +1,21 @@
 {
-    "short_name": "tlotlegomgp",
-    "name": "tlotlegomgp portfolio",
-    "icons": [
-      {
-        "src": "../index/static/favicon/portfolio.png",
-        "type": "image/png",
-        "sizes": "192x192"
-      }
-    ],
-    "start_url": "/?source=pwa",
-    "background_color": "#272d2d",
-    "display": "minimal-ui",
-    "scope": "/",
-    "theme_color": "#272d2d",
-    "shortcuts": [
-
-    ],
-    "description": "Tlotlego Mogapi's Personal Website.",
-    "screenshots": [
-      {
-        "src": "../index/static/img/portfolio.jpg",
-        "type": "image/jpg",
-        "sizes": "540x720"
-      }
-    ]
-  }
+  "name": "tlotlegoMGP Portfolio",
+  "short_name": "tlotlegoMGP",
+  "description": "Tlotlego Mogapi Personal Website.",
+  "scope": "/",
+  "start_url": "/",
+  "background_color": "#272d2d",
+  "theme_color": "#272d2d",
+  "icons": [{
+    "src": "../index/static/index/favicon/portfolio.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }],
+  "screenshots": [
+    {
+      "src": "../index/static/index/img/portfolio.jpg",
+      "type": "image/jpg",
+      "sizes": "1231x692"
+    }
+  ]
+}
