@@ -1,15 +1,15 @@
 .contact-clean {
-	background: #2a2b2e;
+	background: rgb(52,58,64);
 	padding: 80px 0;
 }
 .contact-clean form {
-	max-width: 480px;
+	max-width: 680px;
 	width: 90%;
 	margin: 0 auto;
-	background-color: #2a2b2e;
+	background-color: rgb(52,58,64);
 	padding: 40px;
 	border-radius: 4px;
-	color: #fdb479;
+	color: rgb(200, 211, 213);
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 767px) {
@@ -44,7 +44,7 @@
 }
 .contact-clean form textarea.form-control {
 	min-height: 100px;
-	max-height: 260px;
+	height: 200px;
 	padding-top: 10px;
 	resize: vertical;
 }
@@ -69,7 +69,7 @@
 	transform: translateY(1px);
 }
 .contact-clean form .btn-primary {
-	background-color: #055ada !important;
+	background-color: rgb(200, 211, 213) !important;
 	margin-top: 15px;
 	color: #fff;
 }
