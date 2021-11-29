@@ -45,6 +45,51 @@
     </div>
 </div>
 
+<div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="swiftModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h3 style="margin: 25px;">
+                                Swift Stay
+                            </h3>
+                            <p>
+                                A property management system that helps students easily find and apply for accommodation, and allows agencies to process student applications and manage lease agreements.<br /><br />
+
+                                This was a 4 people team project. I was mainly responsible for building the RESTFUL API consumed by both our web app and mobile app, as well as the deployment of the system. Additionally, as the team lead, 
+                                I was responsible for making sure each of our team members understood their assignment and ensuring that we completed the assigned tickets at the end of each week.
+                            </p>
+                            <ol>
+                                <li style="margin-left: -40px; list-style: none;">
+                                    <span class = "badge badge-dark">Django Rest Framework</span>
+                                    <span class = "badge badge-dark">AWS</span>
+                                    <span class = "badge badge-dark">Google Maps & Places API</span>
+                                    <span class = "badge badge-dark">PostgreSQL</span>
+                                    <span class = "badge badge-dark">Xamarin</span>
+                                    <span class = "badge badge-dark">Heroku</span>
+                                </li>
+                            </ol>
+                            
+                            <div class="btn-group" role="group" style="margin: 5px;">
+                                <button onclick="location.href='https://www.youtube.com/watch?v=w0LfKw9jFwU&ab_channel=TlotlegoMogapi'" class="btn button-dark" type="button">
+                                    &nbsp; &nbsp; Demo&nbsp;&nbsp;<em class="fa fa-play-circle-o"></em>&nbsp;
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 d-none d-sm-block">
+                            <img class="img-fluid img-thumbnail" alt='project screenshot' src="{% static 'index/img/swift.jpg' %}" 
+                                style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    {% include 'index/snippets/close_modal_button.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade portfolio-modal text-center" role="dialog" tabindex="-1" id="mzansiModal">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
